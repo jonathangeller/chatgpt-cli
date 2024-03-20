@@ -48,19 +48,33 @@ To use **ChatGPT CLI for Linux**, an OpenAI API key is required. Follow the step
 
 ## Usage
 
-After installing the dependencies and configuring your OpenAI API key, you can use the script to interact with ChatGPT from your terminal. Within the script, there are two variables you should be aware of:
+After installing the dependencies and configuring your OpenAI API key, you need to ensure the script is executable and set up your environment for using the script.
 
-1. **`API_KEY`**: Replace the placeholder value with your actual OpenAI API key to authenticate your requests. This key is crucial for accessing the ChatGPT API.
+### Making the Script Executable
 
-2. **`MODEL`** (optional): This variable defaults to `gpt-3.5-turbo`. Depending on your needs or the specific features you're looking for, you might want to use a different model. OpenAI offers a variety of models, including the newer `gpt-4` and `gpt-4-turbo`. Visit the [OpenAI Model Documentation](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo) for more information on available models and their capabilities. Adjust the `MODEL` variable in the script accordingly to use a different model.
+Before running the script, make it executable by navigating to the directory containing `chatgpt-cli.sh` and running:
 
-To start the script and interact with ChatGPT, run:
+```bash
+chmod +x chatgpt-cli.sh
+```
+
+### Configuring the Script
+
+Within the script, there are two variables you may want to adjust:
+
+1. **`API_KEY`**: This is where you replace the placeholder with your actual OpenAI API key for authenticating your requests. This key enables access to the ChatGPT API.
+
+2. **`MODEL`** (optional): By default, the script uses `gpt-3.5-turbo` as the model. OpenAI provides various models, including `gpt-4` and `gpt-4-turbo`, which you might prefer for different functionalities or capabilities. For a comprehensive list of models and their descriptions, refer to the [OpenAI Model Documentation](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo). If you wish to use a different model, adjust the `MODEL` variable in the script accordingly.
+
+### Running the Script
+
+With the API key set and the script made executable, you can interact with ChatGPT from your terminal:
 
 ```bash
 ./chatgpt-cli.sh
 ```
 
-Ensure your API key is correctly set in the script or as an environment variable for secure access. Follow the prompts to input your queries and receive Markdown-formatted responses from ChatGPT. These responses are rendered directly in your terminal via `glow`, allowing you to view formatted text, code blocks, and other Markdown elements in a clean and readable format.
+Ensure your API key is correctly set in the script or as an environment variable for secure access. Follow the on-screen prompts to input your queries. You'll receive Markdown-formatted responses from ChatGPT, which are rendered directly in your terminal via `glow`. This allows for viewing formatted text, including code blocks and other Markdown elements, in a clear and readable format.
 
 ## Contributing
 
